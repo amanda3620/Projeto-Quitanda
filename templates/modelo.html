@@ -29,15 +29,6 @@
               </button>
               <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                  <li class="nav-item">
-                    <a class="nav-link active text-white" aria-current="page" href="index.html">Home</a>
-                    <li class = nav-item>
-                        <a class="nav-link active text-white"  aria-current="page" href="sobre.html">Sobre</a>
-                        <li class = nav-item>
-                            <a class="nav-link active text-white"  aria-current="page" href="index.html">Contato</a>
-      
-      
-                        </li>
       
                 </ul>
                 <form class="d-flex" role="search">
@@ -51,9 +42,15 @@
               </div>
             </div>
           </nav>
+
+    {% block banner %}
+
+    {% endblock %}
+
     </header>
 
     <main class = "flex-fill py-5">
+        <br>
         {% block conteudo %}
           
         {% endblock %}
@@ -71,9 +68,11 @@
                 </div>
                 <div class="col-12 col-md-4 text-center">
                     <hr>
-                    Política de Privacidade<br>Termos de uso<br>Trocas e Devoluções
+                    <a href="/sobre" class="text-decoration-none text-white">Área Sobre</a>
                 <br>
-                <a href="/adm" class="text-decoration-none text-dark">Área administrativa</a>
+                    <a href="/" class="text-decoration-none text-white">Área principal</a>
+                <br>
+                    <a href="/adm" class="text-decoration-none text-white">Área administrativa</a>
                 <hr>
                 </div>
                 <div class="col-12 col-md-4 text-center">

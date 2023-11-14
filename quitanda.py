@@ -156,6 +156,13 @@ def editprod():
     conexao.close()
     return redirect('/adm')
 
+@app.route("/sobre")
+def sobre():
+    # Onde na parte {{title}} do modelo, será trocada pelo nome Login, para mostrar que está na página login
+    title="Sobre nós"
+    return render_template("sobre.html", title=title)
+
+
 # Rota de busca
 @app.route("/busca",methods=["post"])
 def busca():

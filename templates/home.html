@@ -1,6 +1,43 @@
 {% extends 'modelo.html' %}
+{% block banner %}
+    <div id="carouselExampleRide" class="carousel slide" data-bs-ride="true">
+        <div class="carousel-inner" >
+        <div class="carousel-item active">
+            <img src="../static/img/fotos/c1.png" class="d-block w-100" alt="..." height="200px">
+            <div class="carousel-caption d-none d-md-block shadow-lg p-3 bg-dark opacity-75 text-ligth">
+            <h5>Semana das frutas!</h5>
+            <p>Venha participar da Semana das Frutas, uma celebração vibrante e colorida que nos convida a explorar o mundo maravilhoso das frutas frescas e suculentas. </p>
+            </div>
+        </div>
+        <div class="carousel-item">
+            <img src="../static/img/fotos/c2.png" class="d-block w-100" alt="..." height="200px">
+            <div class="carousel-caption d-none d-md-block shadow-lg p-3 bg-dark opacity-75 text-ligth">
+            <h5>Mês da melancia!</h5>
+            <p>Neste mês compre 2 e pague 1, não perca esta incrível promoção!</p>
+            </div>
+        </div>
+        <div class="carousel-item">
+            <img src="../static/img/fotos/c3.png" class="d-block w-100" alt="..." height="200px">
+            <div class="carousel-caption d-none d-md-block shadow-lg p-3 bg-dark opacity-75 text-ligth">
+            <h5>Uma Jornada Deliciosa para uma Vida Saudável!</h5>
+            <p>Na compra de até 3 melancias receba um livro de variedades de sucos e vitaminas saudáveis e fáceis de fazer.</p>
+            </div>
+        </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleRide" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleRide" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+    <br>
+    <h3 class="text-dark bg-light mt-3 text-center">Promoções da semana</h3>
+{% endblock %}
 {% block conteudo %}
-    {% if not produtos %}
+   {% if not produtos %}
         <h1 class="display-5 text-center text-danger">Estamos preparando promoções desta semana...</h1>
         <h2 class="display-4 text-center text-success">Retorne em breve.</h2>
     {% else %}
